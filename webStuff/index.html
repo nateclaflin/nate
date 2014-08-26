@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nathaniel Claflin</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.css">
+</head>
+<body onload="init()">
+
+  <script type="text/x-handlebars">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li onclick="hideExamples();"id="route"><a href="#">{{#link-to 'index'}}<h4>About</h4>{{/link-to}}</a></li>
+            <li onclick="hideExamples()" id="route"><a href="#"> {{#link-to 'experience'}}<h4>Experience</h4>{{/link-to}}</a></li>
+            <li onclick="showExamples();" id="route"><a  href="#" >{{#link-to 'examples'}}<h4> Examples</h4>{{/link-to}}</a></li>
+            <li class="pull-right"><a href="intro.html"><h4>Back to the BUBBLES!</h4></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <nav class=" navbar-example navbar navbar-default" role="navigation">
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+        <ul class="nav navbar-nav" id="exampleBar">
+          <li class="example-bar"><a href="#">{{#link-to 'html'}}HTML/CSS/JavaScript{{/link-to}}</a></li>
+          <li class="example-bar"><a href="#">{{#link-to 'java'}}Java{{/link-to}}</a></li>
+          <li class="example-bar"><a href="#">{{#link-to 'cprog'}}C Programming{{/link-to}}</a></li>
+          <li class="example-bar"><a href="#">{{#link-to 'assembly'}}Assembly Language{{/link-to}}</a></li>
+        </ul>
+
+      </div>
+    </nav>
+      {{outlet}}
+  </script>
+  <script type="text/x-handlebars" id="index">
+    <div class="jumbotron">
+      <div class="container-fluid">
+      <div class="container col-md-2">
+         Hello there
+      </div>
+      <div class="container col-md-7">
+         My name is Nathaniel Joseph Claflin and I am an avid computer programmer and builder
+      </div>
+      </div>
+    </div>
+
+    {{outlet}}
+  </script>
+
+  <script type="text/javascript">
+    function collapseFunction() {
+      $('.panel-body').collapse('hide');
+    }    
+  </script>
+
+  <script type="text/x-handlebars" id="experience" collapseFunction()>
+
+    <div class="panel-group col-md-4" id="frys">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#frys" href="#collapseFrys">
+              Frys Electronics, Roseville CA <span class="pull-right">2011-Present</span>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseFrys" class="panel-collapse collapse in">
+          <div class="panel-body">
+            <ul>
+              <li>Excellent knowledge of trending computer components</li>
+              <li>Consistently in top three sales in department over 3 years</li>
+              <li>Intel RetailEdge Certified Salesman</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-group col-md-4" id="tallac">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#tallac" href="#collapseTallac">
+              Tallac Networks, Rocklin CA  <span class="pull-right">2013-Present</span>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseTallac" class="panel-collapse collapse in">
+          <div class="panel-body">
+            <ul>
+              <li>Web Development with focus in multiple JavaScript disciplines</li>
+              <li>Wrote Linux scripts in bash for continuous integration</li>
+              <li>Light firmware development/configuring/flashing</li>
+              <li>HTML5 and CSS with focus on useability of Web GUI</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-group col-md-4" id="school">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#school" href="#collapseSchool">
+              Sierra College, Rocklin CA  <span class="pull-right">2011-2014</span>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseSchool" class="panel-collapse collapse in">
+          <div class="panel-body">
+
+
+            <div class="panel-group" id="c">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#c" href="#collapseC" active=false>
+                    C Programming
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseC" class="panel-collapse collapse in">
+                <ul>
+                  <li>Test</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="panel-group" id="java">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#java" href="#collapseJava" active=false>
+                    Object Oriented Programming
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseJava" class="panel-collapse collapse in">
+                <ul>
+                  <li>Test</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="panel-group" id="assemb">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#assemb" href="#collapseAssembly" active=false>
+                    Assembly Language/Architecture
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseAssembly" class="panel-collapse collapse in">
+                <ul>
+                  <li>Test</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+
+  <script type="text/x-handlebars" id="examples">
+
+
+
+  </script>
+
+  <script type="text/x-handlebars" id="html">
+    HTML
+  </script>
+
+  <script type="text/x-handlebars" id="java">
+    Java
+  </script>
+
+  <script type="text/x-handlebars" id="cprog">
+    C
+  </script>
+
+  <script type="text/x-handlebars" id="assembly">
+    Assembly
+  </script>
+
+  <div class="container" id="bubbles">
+  </div>
+  <script src="js/libs/nateJavascript.js"></script>
+  <script src="js/libs/jquery-1.10.2.js"></script>
+  <script src="js/libs/bootstrap.js"></script>
+  <script src="js/libs/handlebars-1.1.2.js"></script>
+  <script src="js/libs/ember-1.5.1.js"></script>
+  <script src="js/app.js"></script>
+  <!-- to activate the test runner, add the "?test" query string parameter -->
+  <script src="tests/runner.js"></script>   
+</body>
+</html>

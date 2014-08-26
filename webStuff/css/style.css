@@ -1,0 +1,30 @@
+/* Put your CSS here */
+.header-class {
+	width:100%;
+	height:100px;
+	background-color:#EEE;
+}
+#route {
+	margin-top:-30px;
+	font-size: 16;
+}
+#routeBrand {
+	margin-top:0px;
+}
+.sideTab {
+}
+.mainTab {
+
+}
+.navbar-example {
+	margin-top:-25px;
+	color: #70AAAA;
+	margin-bottom:-20px;
+}
+.example-bar {
+	margin-top:-03px;
+	margin-bottom:-20px;
+}
+.myCanvas {
+	width:100%;
+}
